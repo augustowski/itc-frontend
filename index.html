@@ -11,68 +11,86 @@
   <script>
 
     // task num_1
-    
-    function plus(...theArgs){
+
+    function plus(...theArgs) {
       let res = 0;
-      for (let i = 0; i< theArgs.length; i++){
+      for (let i = 0; i < theArgs.length; i++) {
         res += theArgs[i];
       }
       return res;
     }
     console.log(plus(2, 3, 5, 7, 3));
-  
-   // task num_2 
-   
-    function multiply(a,b){
-      let sum = 0 
+
+    // task num_2 
+
+    function multiply(a, b) {
+      let sum = 0
       for (let i = 0; i < b; i++) {
-      sum += (sum, a);
+        sum += (sum, a);
       }
       return sum;
     }
-    console.log(multiply(3,10));
-   
+    console.log(multiply(3, 10));
+
+    //task num_2.1
+    function multiplyAll(...args) {
+      args.reduce(function (a, b) ) {
+        return a * b;
+      }
+    };
+    multiplyAll(1, 2, 3)
+
     // task num_3
-    function mergeArrays(arra1, arra2, arraall){
-    let arra1 = [1,2,3];
+    let arra1 = [1, 2, 3];
     let arra2 = [4, 5];
     let arraall = arra1.concat(arra2);
-    return(arraall)
-    }   
-    console.log(mergeArrays([1,2,3], [4, 5] ))
+    function mergeArrays(arra1, arra2, arraall) {
 
-   // task num_4 
-
-     const arr = [{"name":"Jay", "sex":"male", "fav movie":"TheSocialNetwork"},
-   {"name":"Annie", "sex":"female", "fav movie":"21"},
-   {"name":"Kate", "sex":"female", "fav movie":"TheHobbit"},
-   {"name":"John", "sex":"male", "fav movie":"FastandFuriousTokyoDrift"}];
-   const people = arr.filter(arr => arr.sex == "female");
-    console.log(people);
-    
-    // task num_5
-    function getQuadrant (x,y){
-      if ((x < 0) && (y < 0)) { return('3 четверть');
-      }
-      else if ((x > 0) && (y > 0)) { return('1 четверть');
-      }
-      else if  ((x < 0) && (y > 0)) { return('2 четверть');
-      }
-      else if ((x > 0) && (y < 0))  { return('4 четверть');
-      }
-      else if (((x == 0) && (y > 0)) || ((x == 0) && (y > 0))) { return('ось OY');
-      } 
-      else if (((x > 0) && (y == 0)) || ((x < 0) && (y == 0))) { return('ось OX');
-      }
-      else { return('начало координат');
-      }
-      
+      return (arraall)
     }
-    console.log(getQuadrant(1,2));
-    console.log(getQuadrant(-1,2));
-    console.log(getQuadrant(-2,-3));
-    console.log(getQuadrant(4,-7));
-    console.log(getQuadrant(0,0));
+    console.log(mergeArrays(['a', 'b', 'c'], ['d', 'e']))
+
+    // task num_4 
+
+    const arr = [
+      { name: 'Jay', sex: 'male', favMovie: 'TheSocialNetwork' },
+      { name: 'Annie', sex: 'female', favMovie: '21' },
+      { name: 'Kate', sex: 'female', favMovie: 'TheHobbit' },
+      { name: 'John', sex: 'male', favMovie: 'FastandFuriousTokyoDrift' },
+    ]
+    const people = arr.filter(arr => arr.sex == "female");
+    console.log(people);
+
+    // task num_5
+    function getQuadrant(x, y) {
+      if ((x < 0) && (y < 0)) {
+        return ('3 четверть');
+      }
+      else if ((x > 0) && (y > 0)) {
+        return ('1 четверть');
+      }
+      else if ((x < 0) && (y > 0)) {
+        return ('2 четверть');
+      }
+      else if ((x > 0) && (y < 0)) {
+        return ('4 четверть');
+      }
+      else if (((x == 0) && (y > 0)) || ((x == 0) && (y > 0))) {
+        return ('ось OY');
+      }
+      else if (((x > 0) && (y == 0)) || ((x < 0) && (y == 0))) {
+        return ('ось OX');
+      }
+      else {
+        return ('начало координат');
+      }
+
+    }
+    console.log(getQuadrant(1, 2));
+    console.log(getQuadrant(-1, 2));
+    console.log(getQuadrant(-2, -3));
+    console.log(getQuadrant(4, -7));
+    console.log(getQuadrant(0, 0));
   </script>
 
   <p>end</p>
